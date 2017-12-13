@@ -36,24 +36,43 @@ $ make all -j2 # 2 cores
 $ sudo make install
 ```
 
-
+# environment startup
 ```C++
 $ sudo gedit /etc/ld.so.conf.d/opencv.conf
   /usr/local/lib  
-$ sudo ldconfig 
+$ sudo ldconfig
+
 $ sudo gedit /etc/bash.bashrc 
     PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig  
     export PKG_CONFIG_PATH  
 $ source /etc/bash.bashrc 
+
+$ sudo updatedb
+```
+<br/>
+
+# Cmake . 
+```C++
+$ cmake -DOpenCV_DIR=/home/ubuntu/opencv-2.4.13/release/
 ```
 
-echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib/" >> ~/.bashrc
-source ~/.bashrc
-sudo ldconfig
+**or add CMakeLists.txt as follows:**
+```C++
+  set( OpenCV_DIR "/home/ubuntu/opencv-2.4.13/release/" )
+
+  find_package(OpenCV REQUIRED)
+
+  add_executable( ${PROJECT_NAME} XXX.cpp)
+
+  target_link_libraries( ${PROJECT_NAME} ${OpenCV_LIBS} )  ### need after add_executable or in the end
+
+```
+
 
 
 # Make sure we have installed a C++ compiler.
-sudo apt-get install build-essential g++
+$ sudo apt-get install build-essential g++
+
 # Test a simple OpenCV program. Creates a graphical window, hence you should plug a HDMI monitor in or use a remote viewer such as X Tunneling or VNC or TeamViewer on your desktop.
 cd ~/opencv-2.4.9/samples/cpp
 g++ edge.cpp -lopencv_core -lopencv_imgproc -lopencv_highgui -o edge
