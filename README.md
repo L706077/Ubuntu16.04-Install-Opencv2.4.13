@@ -88,7 +88,7 @@ $ sudo apt-get install build-essential g++
 
 ## Test a simple OpenCV program. Creates a graphical window, hence you should plug a HDMI monitor in or use a remote viewer such as X Tunneling or VNC or TeamViewer on your desktop.
 ```C++
-$ cd ~/opencv-2.4.9/samples/cpp
+$ cd ~/opencv-2.4.13/samples/cpp
 
 $ g++ edge.cpp -lopencv_core -lopencv_imgproc -lopencv_highgui -o edge
 (Or for OpenCV 3.0: g++ edge.cpp -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_imgcodecs -o edge)
