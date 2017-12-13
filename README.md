@@ -80,12 +80,28 @@ $ make
 # Others:
 
 ## Make sure we have installed a C++ compiler.
+```C++
 $ sudo apt-get install build-essential g++
+```
+<br/>
 
 ## Test a simple OpenCV program. Creates a graphical window, hence you should plug a HDMI monitor in or use a remote viewer such as X Tunneling or VNC or TeamViewer on your desktop.
-cd ~/opencv-2.4.9/samples/cpp
-g++ edge.cpp -lopencv_core -lopencv_imgproc -lopencv_highgui -o edge
+```C++
+$ cd ~/opencv-2.4.9/samples/cpp
+
+$ g++ edge.cpp -lopencv_core -lopencv_imgproc -lopencv_highgui -o edge
 (Or for OpenCV 3.0: g++ edge.cpp -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_imgcodecs -o edge)
-./edge
 
+$ ./edge
+```
+<br/>
 
+## Test a GPU accelerated OpenCV sample.
+```C++
+$ cd ../gpu
+
+$ g++ houghlines.cpp -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_calib3d -lopencv_contrib -lopencv_features2d -lopencv_flann -lopencv_gpu -lopencv_legacy -lopencv_ml -lopencv_objdetect -lopencv_photo -lopencv_stitching -lopencv_superres -lopencv_video -lopencv_videostab -o houghlines
+
+$ ./houghlines ../cpp/logo_in_clutter.png
+```
+<br/>
