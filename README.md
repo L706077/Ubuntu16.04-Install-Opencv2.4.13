@@ -182,6 +182,14 @@ $ sudo ldconfig
 ./cpp-example-edge /home/ubuntu/opencv-2.4.13/samples/c/fruits.jpg
 ``
 
+## error 
+if show error as following:
+/usr/bin/ld: 找不到 -lopencv_dep_cudart
+then
+``C++
+sudo ln -s /usr/local/cuda/lib64/libcudart.so /usr/lib/libopencv_dep_cudart.so
+``
+
 ## EXECUTE SOME OPENCV EXAMPLES AND COMPILE A DEMONSTRATION
 
 ## To complete this step, please visit 'http://milq.github.io/install-opencv-ubuntu-debian'.
