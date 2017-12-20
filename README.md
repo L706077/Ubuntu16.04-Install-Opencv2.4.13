@@ -177,6 +177,10 @@ $ make -j4
 $ sudo make install
 $ sudo ldconfig
 ```
+## Test Opencv Sample Code
+``C++
+./cpp-example-edge /home/ubuntu/opencv-2.4.13/samples/c/fruits.jpg
+``
 
 ## EXECUTE SOME OPENCV EXAMPLES AND COMPILE A DEMONSTRATION
 
