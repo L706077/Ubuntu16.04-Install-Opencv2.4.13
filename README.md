@@ -61,8 +61,9 @@ $ sudo passwd root
 $ su
 
 # source /etc/bash.bashrc 
+然后按 Ctrl+d 组合键来退出root权限，接着输入下面的命令即可：
 
-# sudo updatedb
+$ sudo updatedb
 ```
 <br/>
 
