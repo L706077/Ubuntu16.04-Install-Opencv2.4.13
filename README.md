@@ -5,6 +5,7 @@
 - [多版本共存](http://www.linuxdiyf.com/linux/30865.html)
 
 
+# First Installed Method:
 
 ## Step1. Install Dependencies
 ```C++
@@ -48,10 +49,20 @@ $ sudo ldconfig
 
 $ sudo gedit /etc/bash.bashrc 
     PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig  
-    export PKG_CONFIG_PATH  
-$ source /etc/bash.bashrc 
+    export PKG_CONFIG_PATH
+-----------------------------------------------
+$ su //获取root权限，否则下面的source命令不可用  
+  su: Authentication failure  
+$ sudo passwd root
+  Enter new UNIX password:   
+  Retype new UNIX password:   
+  passwd: password updated successfully 
+-----------------------------------------------
+$ su
 
-$ sudo updatedb
+# source /etc/bash.bashrc 
+
+# sudo updatedb
 ```
 <br/>
 
@@ -109,7 +120,14 @@ $ ./houghlines ../cpp/logo_in_clutter.png
 
 ---
 ---
+
+# Second Installed Method:
+
 <br/>
+- [reference 1](http://blog.csdn.net/woainishifu/article/details/77449373)
+- [reference 2](https://www.learnopencv.com/install-opencv3-on-ubuntu/)
+- [reference 3](https://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html#getting-opencv-source-code)
+
 
 ```C++
 ## KEEP UBUNTU OR DEBIAN UP TO DATE
@@ -172,7 +190,7 @@ $ mv opencv-2.4.13 OpenCV
 $ cd OpenCV
 $ mkdir build
 $ cd build
-$ cmake -DWITH_QT=ON -DWITH_OPENGL=ON -DFORCE_VTK=ON -DWITH_TBB=ON -DWITH_GDAL=ON -DWITH_XINE=ON -DBUILD_EXAMPLES=ON ..
+$ cmake -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/usr/local -DWITH_QT=ON -DWITH_OPENGL=ON -DFORCE_VTK=ON -DWITH_TBB=ON -DBUILD_NEW_PYTHON_SUPPORT=ON -DWITH_V4L=ON INSTALL_C_EXAMPLES=ON -DINSTALL_PYTHON_EXAMPLES=ON -DBUILD_EXAMPLES=ON -DWITH_GDAL=ON -DWITH_XINE=ON -DINSTALL_TESTS=ON -DWITH_GSTREAMER=ON -DBUILD_EXAMPLES=ON ..
 $ make -j4
 $ sudo make install
 $ sudo ldconfig
