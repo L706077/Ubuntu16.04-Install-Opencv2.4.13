@@ -125,6 +125,7 @@ $ ./houghlines ../cpp/logo_in_clutter.png
 # Second Installed Method:
 
 <br/>
+
 - [reference 1](http://blog.csdn.net/woainishifu/article/details/77449373)
 - [reference 2](https://www.learnopencv.com/install-opencv3-on-ubuntu/)
 - [reference 3](https://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html#getting-opencv-source-code)
