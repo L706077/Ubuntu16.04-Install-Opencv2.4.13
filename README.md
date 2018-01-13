@@ -122,18 +122,16 @@ $ ./houghlines ../cpp/logo_in_clutter.png
 ---
 ---
 
-# Second Installed Method:
 
+# Second Installed Method:
 <br/>
 
 - [reference 1](http://blog.csdn.net/woainishifu/article/details/77449373)
 - [reference 2](https://www.learnopencv.com/install-opencv3-on-ubuntu/)
 - [reference 3](https://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html#getting-opencv-source-code)
 
-
+### KEEP UBUNTU OR DEBIAN UP TO DATE
 ```C++
-## KEEP UBUNTU OR DEBIAN UP TO DATE
-
 $ sudo apt-get -y update
 $ sudo apt-get -y upgrade
 $ sudo apt-get -y dist-upgrade
@@ -203,9 +201,10 @@ $ sudo ldconfig
 ``
 
 ## error 
-if show error as following:
-/usr/bin/ld: 找不到 -lopencv_dep_cudart
-then
+if show error as following:</br>
+/usr/bin/ld: 找不到 -lopencv_dep_cudart </br>
+then <br>
+
 ``C++
 sudo ln -s /usr/local/cuda/lib64/libcudart.so /usr/lib/libopencv_dep_cudart.so
 ``
