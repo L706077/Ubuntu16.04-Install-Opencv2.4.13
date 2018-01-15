@@ -196,29 +196,29 @@ $ sudo make install
 $ sudo ldconfig
 ```
 ## Test Opencv Sample Code
-``C++
+```C++
 ./cpp-example-edge /home/ubuntu/opencv-2.4.13/samples/c/fruits.jpg
-``
+```
 
 ## error 
 if show error as following:</br>
 /usr/bin/ld: 找不到 -lopencv_dep_cudart </br>
 then <br>
 
-``C++
+```C++
 sudo ln -s /usr/local/cuda/lib64/libcudart.so /usr/lib/libopencv_dep_cudart.so
-``
+```
 
 ## EXECUTE SOME OPENCV EXAMPLES AND COMPILE A DEMONSTRATION
 
-## To complete this step, please visit 'http://milq.github.io/install-opencv-ubuntu-debian'.
+**To complete this step, please visit 'http://milq.github.io/install-opencv-ubuntu-debian'.**
 
 ---
 ## About CUDA Version: if CUDA9.0 UP Ver, create 'CMake ..' need as follow cammand:
-``C++
+```C++
 cmake -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/usr/local -DWITH_QT=ON -DWITH_OPENGL=ON -DWITH_TBB=ON -DBUILD_NEW_PYTHON_SUPPORT=ON -DWITH_V4L=ON INSTALL_C_EXAMPLES=ON -DINSTALL_PYTHON_EXAMPLES=ON -DBUILD_EXAMPLES=ON -DWITH_XINE=ON -DINSTALL_TESTS=ON -DWITH_GSTREAMER=ON -DWITH_CUDA=OFF -DBUILD_EXAMPLES=ON ..
-``
-to close 'WITH_CUDA=OFF'
+```
+**to close 'WITH_CUDA=OFF'**<br/>
 <br/>
 
 
