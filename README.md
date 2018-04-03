@@ -225,3 +225,22 @@ cmake -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/usr/local -DWITH_QT=ON 
 <br/>
 
 
+### If you using CUDA + OpenCV2.4.X , you will meet problem as following:
+
+```C++
+CMake Error: The following variables are used in this project, but they are set to NOTFOUND.
+opencv_dep_CUDA_nppi_LIBRARY
+linked by target "opencv_core" in directory E:/opencv/sources/modules/core
+...
+...
+```
+
+**reference link as following can solve this problem**
+
+- [ cuda9.0 + opencv2.4.x ](https://blog.csdn.net/mystylee/article/details/79035585)
+
+
+
+
+
+
